@@ -1,0 +1,82 @@
+{
+  "displayName" : "amcharts",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/prefab-icon.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ "/resources/amcharts/core.js", "/resources/amcharts/charts.js", "/resources/amcharts/theme.js" ]
+  },
+  "properties" : {
+    "dataset" : {
+      "type" : "object",
+      "displayName" : "Dataset",
+      "description" : "Dataset for displaying the chart",
+      "bindable" : "in-bound",
+      "isList" : true,
+      "value" : "bind:Variables.mdDataset.dataSet",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "xaxis" : {
+      "type" : "string",
+      "displayName" : "Xaxis",
+      "description" : "xaxis",
+      "bindable" : "in-bound",
+      "value" : "country",
+      "widget" : "list",
+      "options" : "bind:widgetProps.dataset.keys",
+      "show" : true,
+      "showAt" : null,
+      "disabled" : false
+    },
+    "yaxis" : {
+      "type" : "string",
+      "displayName" : "Yaxis",
+      "description" : "yaxis",
+      "bindable" : "in-bound",
+      "value" : "visits",
+      "widget" : "list",
+      "options" : "bind:widgetProps.dataset.keys",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "type" : {
+      "type" : "string",
+      "displayName" : "Type",
+      "description" : "Type Of chart",
+      "bindable" : "in-bound",
+      "value" : "Column Chart",
+      "widget" : "list",
+      "options" : [ "Bar Chart", "Column Chart" ],
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "chartwidth" : {
+      "type" : "string",
+      "displayName" : "Chart Width",
+      "description" : "Width Of the Chart",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "chartheight" : {
+      "type" : "string",
+      "displayName" : "Chart Height",
+      "description" : "Hieght of the chart",
+      "bindable" : "in-bound",
+      "isList" : false,
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : { },
+  "methods" : { }
+}
