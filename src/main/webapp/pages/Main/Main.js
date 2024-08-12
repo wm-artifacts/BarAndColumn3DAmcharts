@@ -36,13 +36,16 @@ Prefab.charts = function() {
         if (Prefab.type == "Column Chart") {
             categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
             valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            categoryAxis.renderer.labels.template.rotation = 270;
+
         } else {
             categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
             valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+            categoryAxis.renderer.labels.template.rotation = 0;
+
         }
 
         categoryAxis.dataFields.category = Prefab.xaxis;
-        categoryAxis.renderer.labels.template.rotation = 270;
         categoryAxis.renderer.labels.template.hideOversized = false;
         categoryAxis.renderer.minGridDistance = 20;
         categoryAxis.renderer.labels.template.horizontalCenter = "right";
